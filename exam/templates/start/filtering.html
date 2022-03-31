@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.capacity }}
+        {{ form.activity }}
+        {{ form.date_start }}
+        {{ form.date_finish }}
+        {{ form.date }}
+        <button class="btn btn-success" type="submit">
+            Фильтровать
+        </button>
+    </form>
+    {{ error }}
+    <br>
+    {{ your_filter }}
+    <br>
+    {{ filter.capacity }}
+    <br>
+    {{ filter.activity }}
+    <br>
+    {{ filter.date_start }}
+    <br>
+    {{ filter.date_finish }}
+    <br>
+    {{ test }}
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

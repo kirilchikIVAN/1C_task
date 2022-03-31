@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+    Ваш фильтр:
+    <br>
+    {{ filter.capacity }}
+    <br>
+    {{ filter.activity }}
+    <br>
+    {{ filter.date_start }}
+    <br>
+    {{ filter.date_finish }}
+    <br>
+    Подходящие комнаты:
+    <br>
+    <ol class="rectangle">
+    {% for room in rooms %}
+        <li>
+            {{ room }}
+        </li>
+<!--    <br>-->
+    {% endfor %}
+    </ol>
+    <form method="post">
+        {% csrf_token %}
+        {{ select.numb }}
+        <button class="btn btn-success" type="submit">
+            Забронировать
+        </button>
+        {{ error }}
+    </form>
+</body>
+</html>
